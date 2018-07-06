@@ -1,0 +1,68 @@
+body {
+    background-color: #2B87D1;
+}
+
+.dot {
+    height: 45px;
+    width: 45px;
+    background-color: #226CA7;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 820px;
+}
+
+.top {
+    width: 100%;
+    float: left;
+}
+
+.bottom {
+    width: 100%;
+    float: left;
+}
+
+.input {
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+}
+
+.isCompleted {
+    background-color: #4FBC2D !important;
+}
+
+.isSeen {
+    background-color: #fff !important;
+}
+
+.dotCircle.container {
+    width:100%;
+    margin-top: 50px;
+}
+.circle-content {
+    width:10%;
+    text-align:center;
+    float:left;
+}
+.circle {
+    height: 45px;
+    width: 45px;
+    background-color: #226CA7;
+    border-radius: 50%;
+    display: inline-block;
+}
+.circle-content p {
+    font-size:16px;
+    color:#fff;
+}

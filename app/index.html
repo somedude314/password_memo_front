@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="memorization_app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memorization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body ng-controller="appController">
+
+<div class="dotCircle container">
+    <div class="circle-content" id='dot_{{$index}}' ng-repeat="node in data">
+        <div class="circle" ng-class="{isCompleted:node.isCompleted,isSeen:node.isSeen}"></div>
+        <p ng-if="indexValue === $index && !node.isCompleted">{{node.isSeen?node.text:''}}</p>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row" style="display: block">
+            <div class="col-md-12 text-center">
+                <div style="height:60px;"></div>
+                <div class="bottom">
+                    &nbsp;
+                    <span class="identifier_0" id="identifier_0"></span>
+                </div>
+                <div style="height:60px;"></div>
+                <div class="input">
+                    <input type="text" ng-change="checkForValidNode();" ng-model="pass_input" id="pass_input" style="width:300px; height:30px;text-align:center;border: 2px solid #555;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="main">-->
+    <!---->
+    <!--</div>-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

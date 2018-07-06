@@ -1,0 +1,21 @@
+<div class="container" style="padding-top: 1em;">
+	<div class="col-md-4">
+		<select class="form-control" ng-model="selectedDataSet" ng-change="checkForData(data);" ng-options="data.value as data.label for data in dataSets">
+		<option value="">Select Account</option>
+		</select>		
+	</div>
+	<div class="col-md-8">
+		<div class="table-responsive">
+			<h3 style="margin:0">Memorization Tool Stats</h3>
+		<table class="table table-hover">
+			<tr>
+				<th ng-repeat="head in tableDataColumns">{{head}}</th>
+			</tr>
+			<tr ng-repeat="body in tableData">
+				<td ng-repeat="head in tableDataColumns">{{body[head]}}</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
+
